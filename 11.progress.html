@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<style>
+		.text {
+			text-anchor: middle;
+			dominant-baseline: middle;
+		}
+		body {
+			text-align: center;
+		}
+	</style>
+	<body>
+		<svg xmlns="http://www.w3.org/200/svg" height="700" width="700">
+			<!-- 圆环 -->
+			<circle
+				cx="350"
+				cy="350"
+				r="300"
+				fill="none"
+				stroke="grey"
+				stroke-width="40"
+				stroke-linecap="round"
+			/>
+			<!-- 进度条 -->
+			<circle
+				class="progress"
+				transform="rotate(-90,350,350)"
+				cx="350"
+				cy="350"
+				r="300"
+				fill="none"
+				stroke="red"
+				stroke-width="40"
+				stroke-linecap="round"
+				stroke-dasharray="0,10000"
+			/>
+			<!-- stroke-dasharray="0,10000" 一个是长度 一个是间距 -->
+			<text class="text" x="350" y="350" font-size="200" fill="red">36%</text>
+		</svg>
+		<script src="./12.progress.js"></script>
+	</body>
+</html>
